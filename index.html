@@ -37,7 +37,7 @@
 
   </main>
 
-  <!-- Data & Logic Connections -->
+    <!-- Data & Logic Connections -->
   <script src="ingredients.js"></script>
   <script src="app.js"></script>
   
@@ -48,25 +48,40 @@
     const clearBtn = document.getElementById('clear-btn');
     let chosenIngredients = [];
 
-    // Render checkbox list alphabetically
-    ingredients.sort((a, b) => a.name.localeCompare(b.name)).forEach(item => {
-      const container = document.createElement('label');
-      container.className = "flex items-center space-x-3 p-2 bg-slate-750 hover:bg-slate-700 rounded-lg cursor-pointer transition border border-slate-700/50";
-      container.innerHTML = `
-        <input type="checkbox" value="${item.id}" class="w-4 h-4 accent-amber-500 rounded bg-slate-900 border-slate-600">
-        <span class="text-sm font-medium text-slate-300">${item.name}</span>
-      `;
-      
-      container.querySelector('input').addEventListener('change', (e) => {
-        if(e.target.checked) {
-          chosenIngredients.push(item);
-        } else {
-          chosenIngredients = chosenIngredients.filter(i => i.id !== item.id);
-        }
-        processResults();
+    // Safety fallback: Check if ingredients data array exists
+    if (typeof ingredients === 'undefined' || !Array.isArray(ingredients)) {
+      output.innerHTML = `<p class="text-center mt-12 text-rose-400">Error: Could not load the ingredients array from ingredients.js.</p>`;
+    } else {
+      // Sort ingredients alphabetically by name field
+      ingredients.sort((a, b) => {
+        const nameA = a.name || "";
+        const nameB = b.name || "";
+        return nameA.localeCompare(nameB);
       });
-      grid.appendChild(container);
-    });
+
+      // Render checkbox list
+      ingredients.forEach((item, index) => {
+        // Fallback name if property is missing
+        const displayName = item.name || `Unknown Ingredient #${index}`;
+        
+        const container = document.createElement('label');
+        container.className = "flex items-center space-x-3 p-3 bg-slate-700/40 hover:bg-slate-700/80 rounded-lg cursor-pointer transition border border-slate-700/50 mb-2";
+        container.innerHTML = `
+          <input type="checkbox" value="${index}" class="w-4 h-4 accent-amber-500 rounded bg-slate-900 border-slate-600">
+          <span class="text-sm font-medium text-slate-200">${displayName}</span>
+        `;
+        
+        container.querySelector('input').addEventListener('change', (e) => {
+          if (e.target.checked) {
+            chosenIngredients.push(item);
+          } else {
+            chosenIngredients = chosenIngredients.filter(i => i.name !== item.name);
+          }
+          processResults();
+        });
+        grid.appendChild(container);
+      });
+    }
 
     clearBtn.addEventListener('click', () => {
       document.querySelectorAll('#ingredient-grid input').forEach(box => box.checked = false);
@@ -75,25 +90,25 @@
     });
 
     function processResults() {
-      if(chosenIngredients.length < 2) {
-        output.innerHTML = `<p class="text-center mt-12">Select two or more ingredients on the left to discover potion combinations...</p>`;
+      if (chosenIngredients.length < 2) {
+        output.innerHTML = `<p class="text-center mt-12 text-slate-400">Select two or more ingredients on the left to discover potion combinations...</p>`;
         return;
       }
       
       const discoveryList = findRecipes(chosenIngredients);
-      if(discoveryList.length === 0) {
+      if (discoveryList.length === 0) {
         output.innerHTML = `<p class="text-center mt-12 text-rose-400">No matching effects found for current selection.</p>`;
         return;
       }
 
       output.innerHTML = discoveryList.map(recipe => `
-        <div class="p-4 bg-slate-900/60 border border-slate-700/80 rounded-xl space-y-2">
+        <div class="p-4 bg-slate-900 border border-slate-700 rounded-xl space-y-2 mb-3">
           <div class="flex justify-between items-center">
-            <span class="font-bold text-amber-300 text-xs tracking-wider uppercase">Base Profit Score: +${recipe.efficiencyScore}g</span>
+            <span class="font-bold text-amber-400 text-xs tracking-wider uppercase">Base Value Sum: ${recipe.efficiencyScore}g</span>
           </div>
-          <div class="text-slate-200 font-semibold">${recipe.ingredients.join(' + ')}</div>
+          <div class="text-slate-100 font-semibold text-base">${recipe.ingredients.join(' + ')}</div>
           <div class="flex flex-wrap gap-1 mt-1">
-            ${recipe.effects.map(effect => `<span class="bg-teal-900/40 text-teal-300 text-xs px-2 py-0.5 rounded border border-teal-800/50">${effect}</span>`).join('')}
+            ${recipe.effects.map(effect => `<span class="bg-emerald-950 text-emerald-300 text-xs font-medium px-2.5 py-1 rounded border border-emerald-800">${effect}</span>`).join('')}
           </div>
         </div>
       `).join('');
