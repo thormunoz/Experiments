@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Skyrim Alchemy Crafter</title>
+  <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans antialiased pb-12">
+
+  <header class="bg-slate-800 border-b border-slate-700 py-4 px-6 sticky top-0 z-50 shadow-md">
+    <h1 class="text-xl font-bold text-amber-400 tracking-wide text-center">🧪 Skyrim Lab Assistant</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Left Column: Ingredients Selector -->
+    <section class="bg-slate-800 rounded-xl p-5 border border-slate-700 h-[70vh] flex flex-col">
+      <h2 class="text-lg font-semibold text-slate-200 mb-3 flex items-center justify-between">
+        <span>Available Grid</span>
+        <button id="clear-btn" class="text-xs bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded text-slate-300 transition">Clear All</button>
+      </h2>
+      
+      <!-- Alphabetical badge inventory list -->
+      <div id="ingredient-grid" class="flex-1 overflow-y-auto space-y-2 pr-2">
+        <!-- Dynamically injected checkboxes -->
+      </div>
+    
+
+    <!-- Right Column: Results Output -->
+    <section class="bg-slate-800 rounded-xl p-5 border border-slate-700 h-[70vh] flex flex-col">
+      <h2 class="text-lg font-semibold text-slate-200 mb-3">Best Recipe Combinations</h2>
+      <div id="recipes-output" class="flex-1 overflow-y-auto space-y-3 text-sm text-slate-400">
+        <p class="text-center mt-12">Select two or more ingredients on the left to discover potion combinations...</p>
+      </div>
+    
+
+  </main>
+
+  <!-- Data & Logic Connections -->
+  <script src="ingredients.js"></script>
+  <script src="app.js"></script>
+  
+  <script>
+    // System UI Binder
+    const grid = document.getElementById('ingredient-grid');
+    const output = document.getElementById('recipes-output');
+    const clearBtn = document.getElementById('clear-btn');
+    let chosenIngredients = [];
+
+    // Render checkbox list alphabetically
+    ingredients.sort((a, b) => a.name.localeCompare(b.name)).forEach(item => {
+      const container = document.createElement('label');
+      container.className = "flex items-center space-x-3 p-2 bg-slate-750 hover:bg-slate-700 rounded-lg cursor-pointer transition border border-slate-700/50";
+      container.innerHTML = `
+        <input type="checkbox" value="${item.id}" class="w-4 h-4 accent-amber-500 rounded bg-slate-900 border-slate-600">
+        <span class="text-sm font-medium text-slate-300">${item.name}</span>
+      `;
+      
+      container.querySelector('input').addEventListener('change', (e) => {
+        if(e.target.checked) {
+          chosenIngredients.push(item);
+        } else {
+          chosenIngredients = chosenIngredients.filter(i => i.id !== item.id);
+        }
+        processResults();
+      });
+      grid.appendChild(container);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      document.querySelectorAll('#ingredient-grid input').forEach(box => box.checked = false);
+      chosenIngredients = [];
+      processResults();
+    });
+
+    function processResults() {
+      if(chosenIngredients.length < 2) {
+        output.innerHTML = `<p class="text-center mt-12">Select two or more ingredients on the left to discover potion combinations...</p>`;
+        return;
+      }
+      
+      const discoveryList = findRecipes(chosenIngredients);
+      if(discoveryList.length === 0) {
+        output.innerHTML = `<p class="text-center mt-12 text-rose-400">No matching effects found for current selection.</p>`;
+        return;
+      }
+
+      output.innerHTML = discoveryList.map(recipe => `
+        <div class="p-4 bg-slate-900/60 border border-slate-700/80 rounded-xl space-y-2">
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-amber-300 text-xs tracking-wider uppercase">Base Profit Score: +${recipe.efficiencyScore}g</span>
+          </div>
+          <div class="text-slate-200 font-semibold">${recipe.ingredients.join(' + ')}</div>
+          <div class="flex flex-wrap gap-1 mt-1">
+            ${recipe.effects.map(effect => `<span class="bg-teal-900/40 text-teal-300 text-xs px-2 py-0.5 rounded border border-teal-800/50">${effect}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>

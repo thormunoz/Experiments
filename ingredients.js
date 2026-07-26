@@ -1,0 +1,9245 @@
+//ingredients.js
+const ingredients = [
+{
+    "abeceanLongfin": {
+        "name": "Abecean Longfin",
+        "goldValue": 15,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "ancestorMothWing": {
+        "name": "Ancestor Moth Wing",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Dawnguard",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "ashCreepCluster": {
+        "name": "Ash Creep Cluster",
+        "goldValue": 20,
+        "weight": 0.25,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "ashHopperJelly": {
+        "name": "Ash Hopper Jelly",
+        "goldValue": 20,
+        "weight": 0.25,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "ashenGrassPod": {
+        "name": "Ashen Grass Pod",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1.36
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1.33
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Lockpicking",
+                "description": "Lockpicking is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "bearClaws": {
+        "name": "Bear Claws",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 0.78
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.8
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "bee": {
+        "name": "Bee",
+        "goldValue": 3,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Stamina",
+                "description": "Stamina regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "beehiveHusk": {
+        "name": "Beehive Husk",
+        "goldValue": 5,
+        "weight": 1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 0.5
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "bleedingCrown": {
+        "name": "Bleeding Crown",
+        "goldValue": 10,
+        "weight": 0.3,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "blisterwort": {
+        "name": "Blisterwort",
+        "goldValue": 12,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 0.57
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.6
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Smithing",
+                "description": "For <dur> seconds, weapon and armor improving is <mag>% better.",
+                "cost": {
+                    "baseCost": 0.75,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "blueButterflyWing": {
+        "name": "Blue Butterfly Wing",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "blueDartwing": {
+        "name": "Blue Dartwing",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Pickpocket",
+                "description": "Pickpocketing is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "blueMountainFlower": {
+        "name": "Blue Mountain Flower",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "boarTusk": {
+        "name": "Boar Tusk",
+        "goldValue": 20,
+        "weight": 0.5,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 7.5
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1.25
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 5
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 5.9
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 5
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "boneMeal": {
+        "name": "Bone Meal",
+        "goldValue": 5,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "briarHeart": {
+        "name": "Briar Heart",
+        "goldValue": 20,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 0.5
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "burntSprigganWood": {
+        "name": "Burnt Spriggan Wood",
+        "goldValue": 20,
+        "weight": 0.5,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Alteration",
+                "description": "Alteration spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "butterflyWing": {
+        "name": "Butterfly Wing",
+        "goldValue": 3,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Barter",
+                "description": "You haggle for <mag>% better prices for <dur> seconds.",
+                "cost": {
+                    "baseCost": 2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "canisRoot": {
+        "name": "Canis Root",
+        "goldValue": 5,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Marksman",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "charredSkeeverHide": {
+        "name": "Charred Skeever Hide",
+        "goldValue": 1,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Cure Disease",
+                "description": "Cures all diseases.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 0.36
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "chaurusEggs": {
+        "name": "Chaurus Eggs",
+        "goldValue": 10,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            }
+        ]
+    },
+    "chaurusHunterAntennae": {
+        "name": "Chaurus Hunter Antennae",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Dawnguard",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "chickenEgg": {
+        "name": "Chicken's Egg",
+        "goldValue": 2,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Waterbreathing",
+                "description": "Can breathe underwater for <dur> seconds.",
+                "cost": {
+                    "baseCost": 30,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "creepCluster": {
+        "name": "Creep Cluster",
+        "goldValue": 10,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "crimsonNirnroot": {
+        "name": "Crimson Nirnroot",
+        "goldValue": 10,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 3.3
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 3
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 3
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "cyrodilicSpadetail": {
+        "name": "Cyrodilic Spadetail",
+        "goldValue": 15,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "daedraHeart": {
+        "name": "Daedra Heart",
+        "goldValue": 250,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "deathbell": {
+        "name": "Deathbell",
+        "goldValue": 4,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1.5
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 2.1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "dragonsTongue": {
+        "name": "Dragon's Tongue",
+        "goldValue": 5,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Barter",
+                "description": "You haggle for <mag>% better prices for <dur> seconds.",
+                "cost": {
+                    "baseCost": 2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Illusion",
+                "description": "Illusion spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Two-handed",
+                "description": "Two-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "dwarvenOil": {
+        "name": "Dwarven Oil",
+        "goldValue": 15,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Illusion",
+                "description": "Illusion spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "ectoplasm": {
+        "name": "Ectoplasm",
+        "goldValue": 25,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.8
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "elvesEar": {
+        "name": "Elves Ear",
+        "goldValue": 10,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Marksman",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "emperorParasolMoss": {
+        "name": "Emperor Parasol Moss",
+        "goldValue": 1,
+        "weight": 0.25,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 19.7
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1.5
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Two-handed",
+                "description": "Two-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "eyeOfSabreCat": {
+        "name": "Eye of Sabre Cat",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "falmerEar": {
+        "name": "Falmer Ear",
+        "goldValue": 10,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Lockpicking",
+                "description": "Lockpicking is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "felsaadTernFeathers": {
+        "name": "Felsaad Tern Feathers",
+        "goldValue": 50,
+        "weight": 0.25,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Cure Disease",
+                "description": "Cures all diseases.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "jarrinRoot": {
+        "name": "Jarrin Root",
+        "goldValue": 10,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 158.5
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 100
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "fireSalts": {
+        "name": "Fire Salts",
+        "goldValue": 50,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "flyAmanita": {
+        "name": "Fly Amanita",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Two-handed",
+                "description": "Two-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Stamina",
+                "description": "Stamina regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "frostMirriam": {
+        "name": "Frost Mirriam",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "frostSalts": {
+        "name": "Frost Salts",
+        "goldValue": 100,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "garlic": {
+        "name": "Garlic",
+        "goldValue": 1,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "giantLichen": {
+        "name": "Giant Lichen",
+        "goldValue": 5,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "giantsToe": {
+        "name": "Giant's Toe",
+        "goldValue": 20,
+        "weight": 0,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 5.9
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 5
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "gleamBlossom": {
+        "name": "Gleamblossom",
+        "goldValue": 5,
+        "weight": 0.1,
+        "dlc": "Dawnguard",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "glowDust": {
+        "name": "Glow Dust",
+        "goldValue": 20,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "glowingMushroom": {
+        "name": "Glowing Mushroom",
+        "goldValue": 5,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Smithing",
+                "description": "For <dur> seconds, weapon and armor improving is <mag>% better.",
+                "cost": {
+                    "baseCost": 0.75,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "grassPod": {
+        "name": "Grass Pod",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Alteration",
+                "description": "Alteration spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "hagravenClaw": {
+        "name": "Hagraven Claw",
+        "goldValue": 20,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 10,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Barter",
+                "description": "You haggle for <mag>% better prices for <dur> seconds.",
+                "cost": {
+                    "baseCost": 2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "hagravenFeathers": {
+        "name": "Hagraven Feathers",
+        "goldValue": 20,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "hangingMoss": {
+        "name": "Hanging Moss",
+        "goldValue": 1,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "hawkBeak": {
+        "name": "Hawk Beak",
+        "goldValue": 15,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "hawkFeathers": {
+        "name": "Hawk Feathers",
+        "goldValue": 15,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Cure Disease",
+                "description": "Cures all diseases.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 0.36
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "hawksEgg": {
+        "name": "Hawk's Egg",
+        "goldValue": 5,
+        "weight": 0.5,
+        "dlc": "Hearthfire",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Waterbreathing",
+                "description": "Can breathe underwater for <dur> seconds.",
+                "cost": {
+                    "baseCost": 30,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "histcarp": {
+        "name": "Histcarp",
+        "goldValue": 6,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Waterbreathing",
+                "description": "Can breathe underwater for <dur> seconds.",
+                "cost": {
+                    "baseCost": 30,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            }
+        ]
+    },
+    "honeycomb": {
+        "name": "Honeycomb",
+        "goldValue": 5,
+        "weight": 1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 0.5
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "humanFlesh": {
+        "name": "Human Flesh",
+        "goldValue": 1,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "humanHeart": {
+        "name": "Human Heart",
+        "goldValue": 0,
+        "weight": 1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "iceWraithTeeth": {
+        "name": "Ice Wraith Teeth",
+        "goldValue": 30,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Heavy Armor",
+                "description": "Increase Heavy Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "impStool": {
+        "name": "Imp Stool",
+        "goldValue": 0,
+        "weight": 0.3,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 0.57
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.6
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "jazbayGrapes": {
+        "name": "Jazbay Grapes",
+        "goldValue": 1,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "juniperBerries": {
+        "name": "Juniper Berries",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Marksman",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "largeAntlers": {
+        "name": "Large Antlers",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1.75
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 6
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "lavender": {
+        "name": "Lavender",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Conjuration",
+                "description": "Conjurations spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.25,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "lunaMothWing": {
+        "name": "Luna Moth Wing",
+        "goldValue": 5,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            }
+        ]
+    },
+    "moonSugar": {
+        "name": "Moon Sugar",
+        "goldValue": 50,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "moraTapinella": {
+        "name": "Mora Tapinella",
+        "goldValue": 4,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Stamina",
+                "description": "Stamina regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Illusion",
+                "description": "Illusion spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "mudcrabChitin": {
+        "name": "Mudcrab Chitin",
+        "goldValue": 2,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Cure Disease",
+                "description": "Cures all diseases.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "namirasRot": {
+        "name": "Namira's Rot",
+        "goldValue": 0,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Lockpicking",
+                "description": "Lockpicking is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "netchJelly": {
+        "name": "Netch Jelly",
+        "goldValue": 20,
+        "weight": 0.5,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 2
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "nightshade": {
+        "name": "Nightshade",
+        "goldValue": 8,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Lingering Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.8
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "nirnroot": {
+        "name": "Nirnroot",
+        "goldValue": 10,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 12.6
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "nordicBarnacle": {
+        "name": "Nordic Barnacle",
+        "goldValue": 5,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Waterbreathing",
+                "description": "Can breathe underwater for <dur> seconds.",
+                "cost": {
+                    "baseCost": 30,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Pickpocket",
+                "description": "Pickpocketing is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "orangeDartwing": {
+        "name": "Orange Dartwing",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Pickpocket",
+                "description": "Pickpocketing is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "pearl": {
+        "name": "Pearl",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "pineThrushEgg": {
+        "name": "Pine Thrush Egg",
+        "goldValue": 2,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Lockpicking",
+                "description": "Lockpicking is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "poisonBloom": {
+        "name": "Poison Bloom",
+        "goldValue": 5,
+        "weight": 0.25,
+        "dlc": "Dawnguard",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1.5
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "powderedMammothTusk": {
+        "name": "Powdered Mammoth Tusk",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Fire",
+                "description": "Target is <mag>% weaker to fire damage for <dur> seconds",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fear",
+                "description": "Creatures and people up to level <mag> flee from combat for <dur> seconds.",
+                "cost": {
+                    "baseCost": 5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "purpleMountainFlower": {
+        "name": "Purple Mountain Flower",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Sneak",
+                "description": "You are <mag>% harder to detect for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 10,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "redMountainFlower": {
+        "name": "Red Mountain Flower",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "riverBetty": {
+        "name": "River Betty",
+        "goldValue": 15,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 2.5
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Alteration",
+                "description": "Alteration spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "rockWarblerEgg": {
+        "name": "Rock Warbler Egg",
+        "goldValue": 2,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "sabreCatTooth": {
+        "name": "Sabre Cat Tooth",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Heavy Armor",
+                "description": "Increase Heavy Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Smithing",
+                "description": "For <dur> seconds, weapon and armor improving is <mag>% better.",
+                "cost": {
+                    "baseCost": 0.75,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "salmonRoe": {
+        "name": "Salmon Roe",
+        "goldValue": 5,
+        "weight": 0.2,
+        "dlc": "Hearthfire",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 0.36
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 0.4
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Waterbreathing",
+                "description": "Can breathe underwater for <dur> seconds.",
+                "cost": {
+                    "baseCost": 30,
+                    "multiplier": 15.4
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 12
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1.05
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 12.5
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 0.08
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "saltPile": {
+        "name": "Salt Pile",
+        "goldValue": 1,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "scalyPholiota": {
+        "name": "Scaly Pholiota",
+        "goldValue": 4,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Illusion",
+                "description": "Illusion spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Stamina",
+                "description": "Stamina regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "scathecraw": {
+        "name": "Scathecraw",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "silversidePerch": {
+        "name": "Silverside Perch",
+        "goldValue": 15,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "skeeverTail": {
+        "name": "Skeever Tail",
+        "goldValue": 3,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Ravage Health",
+                "description": "Causes <mag> points of concentrated poison damage.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Light Armor",
+                "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "slaughterfishEgg": {
+        "name": "Slaughterfish Egg",
+        "goldValue": 3,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Pickpocket",
+                "description": "Pickpocketing is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "slaughterfishScales": {
+        "name": "Slaughterfish Scales",
+        "goldValue": 3,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Health",
+                "description": "Causes <mag> points of poison damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 12,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Heavy Armor",
+                "description": "Increase Heavy Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "smallAntlers": {
+        "name": "Small Antlers",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Poison",
+                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "smallPearl": {
+        "name": "Small Pearl",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify One-handed",
+                "description": "One-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "snowberries": {
+        "name": "Snowberries",
+        "goldValue": 4,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "spawnAsh": {
+        "name": "Spawn Ash",
+        "goldValue": 20,
+        "weight": 0.1,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Fire",
+                "description": "Resist <mag>% of fire damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "spiderEgg": {
+        "name": "Spider Egg",
+        "goldValue": 5,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Stamina",
+                "description": "Drain the target's Stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.8,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Lockpicking",
+                "description": "Lockpicking is <mag>% easier for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Marksman",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "sprigganSap": {
+        "name": "Spriggan Sap",
+        "goldValue": 15,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Damage Magicka Regen",
+                "description": "Decrease the target's Magicka regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Enchanting",
+                "description": "For <dur> seconds, items are enchanted <mag>% stronger.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Smithing",
+                "description": "For <dur> seconds, weapon and armor improving is <mag>% better.",
+                "cost": {
+                    "baseCost": 0.75,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Alteration",
+                "description": "Alteration spells last <mag>% longer for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "swampFungalPod": {
+        "name": "Swamp Fungal Pod",
+        "goldValue": 5,
+        "weight": 0.25,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Shock",
+                "description": "Resist <mag>% of shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 10,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Paralysis",
+                "description": "Target is paralyzed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 500,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "taproot": {
+        "name": "Taproot",
+        "goldValue": 15,
+        "weight": 0.5,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Illusion",
+                "description": "Illusion spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.4,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Magicka",
+                "description": "Magicka regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "thistleBranch": {
+        "name": "Thistle Branch",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Frost",
+                "description": "Resist <mag>% of frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Stamina",
+                "description": "Concentrated poison damages maximum stamina by <mag> points.",
+                "cost": {
+                    "baseCost": 1.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 0.1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 0.75
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 0
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Heavy Armor",
+                "description": "Increase Heavy Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "torchbugThorax": {
+        "name": "Torchbug Thorax",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Lingering Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 10,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Weakness to Magic",
+                "description": "Target is <mag>% weaker to magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Stamina",
+                "description": "Stamina is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "tramaRoot": {
+        "name": "Trama Root",
+        "goldValue": 1,
+        "weight": 0.2,
+        "dlc": "Dragonborn",
+        "effects": [
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points.",
+                "cost": {
+                    "baseCost": 2.2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Slow",
+                "description": "Target moves at 50% speed for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 50,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    },
+    "trollFat": {
+        "name": "Troll Fat",
+        "goldValue": 15,
+        "weight": 1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Two-handed",
+                "description": "Two-handed weapons do <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Frenzy",
+                "description": "Creatures and people up to level <mag> will attack anything nearby for <dur> seconds.",
+                "cost": {
+                    "baseCost": 15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "tundraCotton": {
+        "name": "Tundra Cotton",
+        "goldValue": 1,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Block",
+                "description": "Blocking absorbs <mag>% more damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Barter",
+                "description": "You haggle for <mag>% better prices for <dur> seconds.",
+                "cost": {
+                    "baseCost": 2,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "vampireDust": {
+        "name": "Vampire Dust",
+        "goldValue": 25,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Invisibility",
+                "description": "Invisibility for <dur> seconds.",
+                "cost": {
+                    "baseCost": 100,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 0,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 4,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Regenerate Health",
+                "description": "Health regenerates <mag>% faster for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Cure Disease",
+                "description": "Cures all diseases.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "voidSalts": {
+        "name": "Void Salts",
+        "goldValue": 125,
+        "weight": 0.2,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Shock",
+                "description": "Target is <mag>% weaker to shock damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.7,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Health",
+                "description": "Causes <mag> points of poison damage.",
+                "cost": {
+                    "baseCost": 3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 1,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Magicka",
+                "description": "Magicka is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "wheat": {
+        "name": "Wheat",
+        "goldValue": 5,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Health",
+                "description": "Restore <mag> points of Health.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            },
+            {
+                "name": "Lingering Damage Magicka",
+                "description": "Drains the target's Magicka by <mag> points per second for <dur> seconds.",
+                "cost": {
+                    "baseCost": 10,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 1,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "whiteCap": {
+        "name": "White Cap",
+        "goldValue": 0,
+        "weight": 0.3,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Weakness to Frost",
+                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 3,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 30,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            },
+            {
+                "name": "Fortify Heavy Armor",
+                "description": "Increase Heavy Armor skill by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Restore Magicka",
+                "description": "Restore <mag> points of Magicka.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Ravage Magicka",
+                "description": "Concentrated poison damages maximum magicka by <mag> points.\t",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 10,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": true
+            }
+        ]
+    },
+    "wispWrappings": {
+        "name": "Wisp Wrappings",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Vanilla",
+        "effects": [
+            {
+                "name": "Restore Stamina",
+                "description": "Restore <mag> Stamina.",
+                "cost": {
+                    "baseCost": 0.6,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 0,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Destruction",
+                "description": "Destruction spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 5,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Carry Weight",
+                "description": "Carrying capacity increases by <mag> for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.15,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 300,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Resist Magic",
+                "description": "Resist <mag>% of magic for <dur> seconds.",
+                "cost": {
+                    "baseCost": 1,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 2,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            }
+        ]
+    },
+    "yellowMountainFlower": {
+        "name": "Yellow Mountain Flower",
+        "goldValue": 2,
+        "weight": 0.1,
+        "dlc": "Dawnguard",
+        "effects": [
+            {
+                "name": "Resist Poison",
+                "description": "Resist <mag>% of poison for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Restoration",
+                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.5,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1.25
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Fortify Health",
+                "description": "Health is increased by <mag> points for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.35,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 4,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 60,
+                    "multiplier": 1
+                },
+                "variableMagnitude": true,
+                "variableDuration": false,
+                "harmful": false
+            },
+            {
+                "name": "Damage Stamina Regen",
+                "description": "Decrease the target's Stamina regeneration by <mag>% for <dur> seconds.",
+                "cost": {
+                    "baseCost": 0.3,
+                    "multiplier": 1
+                },
+                "magnitude": {
+                    "baseMag": 100,
+                    "multiplier": 1
+                },
+                "duration": {
+                    "baseDur": 5,
+                    "multiplier": 1
+                },
+                "variableMagnitude": false,
+                "variableDuration": true,
+                "harmful": true
+            }
+        ]
+    }
+}
+];
