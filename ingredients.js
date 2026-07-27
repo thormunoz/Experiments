@@ -1,87 +1,51 @@
 //ingredients.js
 const ingredients = [
 {
-    "id": "abeceanLongfin",
-        "name": "Abecean Longfin",
-        "goldValue": 15,
-        "weight": 0.5,
-        "dlc": "Vanilla",
-        "effects": [
+    id: "abeceanLongfin",
+        name: "Abecean Longfin",
+        goldValue: 15,
+        weight: 0.5,
+        dlc: "Vanilla",
+        effects: [
             {
-                "name": "Weakness to Frost",
-                "description": "Target is <mag>% weaker to frost damage for <dur> seconds.",
-                "cost": {
-                    "baseCost": 0.5,
-                    "multiplier": 1
-                },
-                "magnitude": {
-                    "baseMag": 3,
-                    "multiplier": 1
-                },
-                "duration": {
-                    "baseDur": 30,
-                    "multiplier": 1
-                },
-                "variableMagnitude": true,
-                "variableDuration": false,
-                "harmful": true
+                name: "Weakness to Frost",
+                description: "Target is <mag>% weaker to frost damage for <dur> seconds.",
+                cost: { baseCost: 0.5, multiplier: 1},
+                magnitude: { baseMag: 3, multiplier: 1},
+                duration: { baseDur: 30, multiplier: 1},
+                variableMagnitude: true,
+                variableDuration: false,
+                harmful: true
             },
             {
-                "name": "Fortify Sneak",
-                "description": "You are <mag>% harder to detect for <dur> seconds.",
-                "cost": {
-                    "baseCost": 0.5,
-                    "multiplier": 1
-                },
-                "magnitude": {
-                    "baseMag": 4,
-                    "multiplier": 1
-                },
-                "duration": {
-                    "baseDur": 60,
-                    "multiplier": 1
-                },
-                "variableMagnitude": true,
-                "variableDuration": false,
-                "harmful": false
+                name: "Fortify Sneak",
+                description: "You are <mag>% harder to detect for <dur> seconds.",
+                cost: { baseCost: 0.5, multiplier: 1},
+                magnitude: { baseMag: 4, multiplier: 1},
+                duration: { baseDur: 60, multiplier: 1},
+                variableMagnitude: true,
+                variableDuration: false,
+                harmful: false
             },
             {
-                "name": "Weakness to Poison",
-                "description": "Target is <mag>% weaker to poison for <dur> seconds.",
-                "cost": {
-                    "baseCost": 1,
-                    "multiplier": 1
-                },
-                "magnitude": {
-                    "baseMag": 2,
-                    "multiplier": 1
-                },
-                "duration": {
-                    "baseDur": 30,
-                    "multiplier": 1
-                },
-                "variableMagnitude": true,
-                "variableDuration": false,
-                "harmful": true
+                name: "Weakness to Poison",
+                description: "Target is <mag>% weaker to poison for <dur> seconds.",
+                cost: { baseCost: 1, multiplier: 1},
+                magnitude: { baseMag: 2, multiplier: 1},
+                duration: { baseDur: 30, multiplier: 1},
+                variableMagnitude: true,
+                variableDuration: false,
+                harmful: true
             },
             {
-                "name": "Fortify Restoration",
-                "description": "Restoration spells are <mag>% stronger for <dur> seconds.",
-                "cost": {
-                    "baseCost": 0.5,
-                    "multiplier": 1
-                },
-                "magnitude": {
-                    "baseMag": 4,
-                    "multiplier": 1
-                },
-                "duration": {
-                    "baseDur": 60,
-                    "multiplier": 1
-                },
-                "variableMagnitude": true,
-                "variableDuration": false,
-                "harmful": false
+                name: "Fortify Restoration",
+                description: "Restoration spells are <mag>% stronger for <dur> seconds.",
+                cost: { baseCost: 0.5, multiplier: 1},
+                magnitude: { baseMag: 4, multiplier: 1},
+                duration: { baseDur: 60, multiplier: 1},
+                variableMagnitude: true,
+                variableDuration: false,
+                harmful: false
             }
         ]
     },
