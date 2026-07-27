@@ -1,7 +1,7 @@
 //ingredients.js
 const ingredients = [
 {
-    "abeceanLongfin": {
+    "id": "abeceanLongfin",
         "name": "Abecean Longfin",
         "goldValue": 15,
         "weight": 0.5,
