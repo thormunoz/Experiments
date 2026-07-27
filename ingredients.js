@@ -360,9 +360,7 @@ const ingredients = [
         variableDuration: false,
         harmful: false
       }
-      // Note: Snippet cuts off here
-
-            {
+      {
                 "name": "Fortify Light Armor",
                 "description": "Increases Light Armor skill by <mag> points for <dur> seconds.",
                 "cost": {
