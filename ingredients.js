@@ -114,7 +114,7 @@ const ingredients = [
         variableMagnitude: true,
         variableDuration: false,
         harmful: true
-      }
+      },
       {
         name: "Invisibility",
         description: "Invisibility for <dur> seconds.",
@@ -173,7 +173,7 @@ const ingredients = [
         variableMagnitude: true,
         variableDuration: false,
         harmful: false
-      }
+      },
       {
         name: "Resist Shock",
         description: "Resist <mag>% of shock damage for <dur> seconds.",
@@ -232,7 +232,7 @@ const ingredients = [
         variableMagnitude: true,
         variableDuration: false,
         harmful: false
-      }
+      },
          {
         name: "Fortify Sneak",
         description: "You are <mag>% harder to detect for <dur> seconds.",
